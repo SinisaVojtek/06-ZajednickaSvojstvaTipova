@@ -2,7 +2,9 @@
 
 namespace Vsite.CSharp
 {
-    class MojaKlasa {
+    //  Definirati klasu MojaKlasa bez ikakvih članova, samo s praznom definicijom.
+    class MojaKlasa
+    {
 
     }
 
@@ -10,10 +12,12 @@ namespace Vsite.CSharp
     {
         public static void IspisToString()
         {
+            //  Otkomentirati donje naredbe.
             MojaKlasa mk1 = new MojaKlasa();
             MojaKlasa mk2 = mk1;
             MojaKlasa mk3 = new MojaKlasa();
 
+            //  Za svaki objekt (mk1, mk2, mk3) pozvati njegovu metodu ToString i ispisati na konzolu ono što ona vraća.
             Console.WriteLine(mk1.ToString());
             Console.WriteLine(mk2.ToString());
             Console.WriteLine(mk3.ToString());
@@ -21,21 +25,26 @@ namespace Vsite.CSharp
 
         public static void IspisGetType()
         {
+            //  Otkomentirati donje naredbe.
             MojaKlasa mk1 = new MojaKlasa();
             MojaKlasa mk2 = mk1;
             MojaKlasa mk3 = new MojaKlasa();
 
+            //  Za svaki objekt (mk1, mk2, mk3) pozvati njegovu metodu GetType i ispisati na konzolu ono što ona vraća.
             Console.WriteLine(mk1.GetType());
             Console.WriteLine(mk2.GetType());
             Console.WriteLine(mk3.GetType());
         }
+    
 
         public static void IspisGetHashCode()
         {
+            //  Otkomentirati donje naredbe.
             MojaKlasa mk1 = new MojaKlasa();
             MojaKlasa mk2 = mk1;
             MojaKlasa mk3 = new MojaKlasa();
 
+            //  Za svaki objekt (mk1, mk2, mk3) pozvati njegovu metodu GetHashCode i ispisati na konzolu ono što ona vraća.
             Console.WriteLine(mk1.GetHashCode());
             Console.WriteLine(mk2.GetHashCode());
             Console.WriteLine(mk3.GetHashCode());
@@ -43,10 +52,12 @@ namespace Vsite.CSharp
 
         public static void IspisEquals()
         {
+            //  Otkomentirati donje naredbe.
             MojaKlasa mk1 = new MojaKlasa();
             MojaKlasa mk2 = mk1;
             MojaKlasa mk3 = new MojaKlasa();
 
+            //Otkomentirati donje naredbe i ispisati na konzolu rezultate usporedbi.
             Console.WriteLine(mk1.Equals(mk2));
             Console.WriteLine(mk1.Equals(mk3));
             Console.WriteLine(mk2.Equals(mk1));
