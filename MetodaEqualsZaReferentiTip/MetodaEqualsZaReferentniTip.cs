@@ -34,13 +34,27 @@ namespace Vsite.CSharp
                 return false;
             if (GetType() != obj.GetType())
                 return false;
-             return Equals((Osoba)obj);
+            return Equals((Osoba)obj);
+        }
+
+        public static bool operator==(Osoba a, Osoba b) {
+            return Osoba.Equals(a,b);
+        }
+
+        public static bool operator !=(Osoba a, Osoba b)
+        {
+            return !(a == b);
         }
 
 
         public override string ToString()
         {
             return string.Format("'{0}, {1}'", m_ime, m_matičniBroj);
+        }
+
+        public override int GetHashCode()
+        {
+            return m_ime.GetHashCode() ^ m_matičniBroj;
         }
     }
 
