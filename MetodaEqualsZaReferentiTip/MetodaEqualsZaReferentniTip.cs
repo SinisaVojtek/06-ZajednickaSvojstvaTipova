@@ -18,6 +18,9 @@ namespace Vsite.CSharp
         //  Implementirati metodu Equals(Osoba) iz sučelja IEquatable<Osoba> tako da za osobe s istim imenom i istim matičnim brojem rezultat bude true
         public bool Equals(Osoba other)
         {
+            if (other == null)
+                return false;
+
             if (m_matičniBroj != other.m_matičniBroj)
             { return false; }
             return object.Equals(m_ime, other.m_ime);
