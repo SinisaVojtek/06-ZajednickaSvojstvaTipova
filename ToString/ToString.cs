@@ -20,8 +20,32 @@ namespace Vsite.CSharp
 
         // TODO: Pregaziti (override) metodu ToString tako da vraća niz u obliku: "2+3j", "2-j", "0", "j", "-j".
         public override string ToString()
-        { 
-            return string.Format("{0}+{1}j", Realni, Imaginarni);
+        {
+            if (Realni == 0 && Imaginarni == 0)
+            {
+                return string.Format("0");
+            }
+            else if (Realni == 0)
+            {
+                if (Imaginarni == 1)
+                {
+                    return string.Format("j");
+                }
+                else if (Imaginarni == -1)
+                {
+                    return string.Format("-j");
+
+                }
+                return string.Format("{0}j", Imaginarni);
+            }
+            else if (Imaginarni == 0) {
+                return string.Format("{0}j", Realni);
+            }
+            if (Imaginarni < 0) {
+                return string.Format("{0}{1}",Realni,Imaginarni);
+            }
+
+            return string.Format("{0}+{1}", Realni, Imaginarni);
         }
 
     }

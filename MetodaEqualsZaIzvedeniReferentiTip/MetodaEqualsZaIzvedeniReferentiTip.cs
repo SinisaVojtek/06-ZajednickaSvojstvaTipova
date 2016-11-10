@@ -17,18 +17,7 @@ namespace Vsite.CSharp
 
         // TODO: Implementirati metodu Equals(Student) iz sučelja IEquatable<Student> da uključi dodatne usporedbe da bi studenti bili jednaki samo ako su na istom smjeru i godini.
 
-        public override bool Equals(object obj)
-        {
-            if (obj == null)
-                return false;
-            if (GetType() != obj.GetType())
-                return false;
-            return Equals((Student)obj);
-        }
-
-        // TODO: Pregaziti (override) metodu Equals(object) tako da poziva metodu Equals(Student).
-
-
+       // TODO: Pregaziti (override) metodu Equals(object) tako da poziva metodu Equals(Student).
 
         public override string ToString()
         {
